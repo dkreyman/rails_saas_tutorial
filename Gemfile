@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails', '~> 4.1.1'
+# Use Twitter Bootstrap library for front-end UI and layout
+gem 'bootstrap-sass', '3.3.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
