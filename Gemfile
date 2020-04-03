@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1', '>= 4.1.1'
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -24,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails', '~> 4.1.1'
 # Use Twitter Bootstrap library for front-end UI and layout
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
