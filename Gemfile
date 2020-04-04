@@ -6,7 +6,6 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
-gem 'pg', '~> 0.18.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 gem 'uglifier', '~> 2.7', '>= 2.7.2'
@@ -60,10 +59,10 @@ group :test do
   gem 'webdrivers'
 end
 
-# group :production do
-#   #use the PostgreSQL gem for Heroku Production server
-#   gem 'pg', '~> 0.18.4'
-# end
+group :production do
+  #use the PostgreSQL gem for Heroku Production server
+  gem 'pg', '~> 0.18.4'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
