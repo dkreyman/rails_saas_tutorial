@@ -35,6 +35,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 #better db display in console
 gem 'hirb', '~> 0.7.3'
 
+#Use devise for user authentication
+gem 'devise', '~> 4.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
