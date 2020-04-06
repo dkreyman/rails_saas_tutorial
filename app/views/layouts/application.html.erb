@@ -19,6 +19,10 @@
               SaaS
           <% end %> 
         </div>
+        <div class='nav navbar-nav navbar-right'>
+          <li><%= link_to 'Login', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        </div>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to 'About', about_path %></li>
             <li><%= link_to 'Contact Us', new_contact_path %></li>
