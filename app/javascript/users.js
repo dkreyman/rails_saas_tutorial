@@ -1,19 +1,18 @@
 /* global $, Stripe */
 
-$(document).on('turbolins:load', function(){
+$(document).on('turbolinks:load', function(){
     var theForm = $('#pro_form')
-    var submitBtn = $('#form-submit-btn')
-    Stripe.setPunlishableKey($('meta[name="stripe-key').attr('content'));   
+    var submitBtn = $('#form-signup-btn')
+    Stripe.setPublishableKey($('meta[name="stripe-key').attr('content'));   
     submitBtn.click(function(event){
         event.preventDefault();
         submitBtn.val("Proccessing").prop('disabled', true)
-    });
 
 
-    var ccNum = $('#card_number').val(),
-        cvcNum = $('#card_code').val(),
-        expMonth = $('#card_month').val(),
-        expYear = $('#card_year').val();
+        var ccNum = $('#card_number').val(),
+            cvcNum = $('#card_code').val(),
+            expMonth = $('#card_month').val(),
+            expYear = $('#card_year').val();
 
         var error = false;
         if(!Stripe.card.validateCardNumber(ccNum)){
@@ -39,10 +38,12 @@ $(document).on('turbolins:load', function(){
                 exp_year: expYear
             }, stripeResponseHandler);
         }   
-    return false;
+        return false;
+    });   
+
+    function stripeResponseHandler(status, response){
+        var token = response.id
+        theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token)); 
+        theForm.get(0).submit();
+    }
 });
-function stripeResponseHandler(status, response){
-    var token = response.id
-    theForm.append( $('<input type="hidden" name="user[stripe_card_token]">').val(token)) 
-    theForm.get(0).submit();
-}
